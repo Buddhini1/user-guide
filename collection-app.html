@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection App User Guide - Loan Management Portal</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- SHARED HEADER -->
+    <div id="header-container"></div>
+
+    <!-- =====================================
+         COLLECTION APP CONTENT
+    ====================================== -->
+    <main>
+        <div class="guide-card">
+
+            <div class="guide-header">
+                <span class="badge">Documentation</span>
+                <h1>Collection App Guide</h1>
+            </div>
+
+            <!-- SECTION 1: SYSTEM SETUP -->
+            <h2>1. FDO Setup & System Configuration</h2>
+            <p>Before an FDO (Field Officer) can log into the mobile app, perform the following administrative setup in the central system:</p>
+
+            <div class="flow">
+                <ol>
+                    <li><strong>Create FDO User:</strong> Go to <code>Admin &gt; Common Users</code>. (Select <strong>FDO</strong> as the designation type when creating the profile.)</li>
+                    <li><strong>Add Centers / Routes:</strong>
+                        <ul>
+                            <li>Micro Loan: <code>Microloan &gt; Operation &gt; Center</code></li>
+                            <li>Business Loan: <code>Business Loan &gt; Operation &gt; Route</code></li>
+                        </ul>
+                    </li>
+                    <li><strong>Assign FDO:</strong> Link the FDO user to the center/route via <code>Microloan / Business Loan &gt; Operation &gt; Add/Change FDO</code>. </li>
+                        <p><em>Note: If this assignment is missed, assigned loans will not be visible on the mobile app.</em></p>
+                </ol>
+            </div>
+
+            <hr>
+
+            <!-- SECTION 2: PRODUCT SELECTION -->
+            <h2>2. Logging In & Product Selection</h2>
+            <p>Log into the app using the FDO credentials. Upon login, select the collection type on the <strong>Choose Product</strong> screen:</p>
+
+            <ul>
+                <li><strong>Business Loan:</strong> Tap to manage Business Loan customer accounts.</li>
+                <li><strong>Micro:</strong> Tap to manage Micro Loan customer accounts.</li>
+            </ul>
+
+            <div class="guide-image-container">
+                <img src="images/collection-app/choose-product.png" alt="Choose Product Screen" class="guide-img">
+            </div>
+
+            <p><em>Note: Both loan types follow the exact same process to record and sync payments through the app.</em></p>
+
+            <hr>
+
+            <!-- SECTION 3: MOBILE MODULES -->
+            <h2>3. App Dashboard & Modules</h2>
+            <p>Selecting a product opens four core operational modules:</p>
+
+            <div class="guide-image-container">
+                <img src="images/collection-app/dashboard.png" alt="App Dashboard Modules" class="guide-img">
+            </div>
+
+            <h3>3.1 Customers (Recording Payments)</h3>
+            <p>The Customers module is used to record field collections:</p>
+
+            <div class="flow">
+                <ol>
+                    <li>Navigate to <strong>Customers</strong>.</li>
+                    <li>Search and select the target customer record.</li>
+                    <li>Verify loan details in the popup dialog (Contract Code, Loan Date, Loan Amount, Repayment Term, Total Arrears, Installment, and Current Balance).</li>
+                    <li>Enter the collected sum into the <code>Enter payment amount...</code> field.</li>
+                    <li>Tap <strong>Pay</strong> to submit the transaction.</li>
+                </ol>
+            </div>
+
+            <div class="guide-image-container">
+                <img src="images/collection-app/add-payment.png" alt="Add Payment Screen" class="guide-img">
+            </div>
+
+            <h3>3.2 Payments (Payment History)</h3>
+            <p>Open <strong>Payments</strong> to view all collected payment records and past history for specific customers (including Contract Code, Total Paid, and Transaction Dates).</p>
+
+            <div class="guide-image-container">
+                <img src="images/collection-app/payment-history.png" alt="Payment History Modal" class="guide-img">
+            </div>
+
+            <h3>3.3 Receipts (Uploading to Core System)</h3>
+            <p>After recording payments, they must be uploaded from the mobile device to the main system:</p>
+
+            <div class="flow">
+                <ol>
+                    <li>Open the <strong>Receipts</strong> module.</li>
+                    <li>Select the pending collected payments.</li>
+                    <li>Tap the <strong>Upload Icon</strong> (located at the top right) to transfer data to the central database.</li>
+                </ol>
+            </div>
+
+            <div class="guide-image-container">
+                <img src="images/collection-app/receipts.png" alt="Receipts Upload Screen" class="guide-img">
+            </div>
+
+            <h3>3.4 Collections (Summary Reports)</h3>
+            <p>Open <strong>Collections</strong> to view regional or center-wise summary totals, including total assigned accounts and pending items.</p>
+
+            <div class="guide-image-container">
+                <img src="images/collection-app/collections.png" alt="Collections Summary Screen" class="guide-img">
+            </div>
+
+            <hr>
+
+            <!-- SECTION 4: SYSTEM SYNC -->
+            <h2>4. Central System Cashier Sync</h2>
+            <p>To finalize uploaded app payments on the central admin platform:</p>
+
+            <div class="flow">
+                <ol>
+                    <li>Navigate to <code>Cashier &gt; Business Loan</code> (or <code>Micro Loan</code>).</li>
+                    <li>Click <strong>Sync Collection Data</strong>.</li>
+                    <li>Review uploaded FDO entries, input the <strong>Confirm Cashier Amount</strong>, and click <strong>Save</strong>.</li>
+                </ol>
+            </div>
+
+            <div class="guide-image-container">
+                <img src="images/collection-app/system-sync.png" alt="System Collection Data Sync" class="guide-img">
+            </div>
+
+        </div>
+    </main>
+
+    <!-- SHARED FOOTER -->
+    <div id="footer-container"></div>
+
+    <!-- COMPONENT SCRIPT -->
+    <script src="js/components.js"></script>
+
+</body>
+
+</html>

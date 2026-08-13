@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Cashier Operations & Repayments User Guide
+        - Loan Management Portal
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- SHARED HEADER -->
+
+    <div id="header-container"></div>
+
+
+    <!-- =====================================
+         CASHIER CONTENT
+    ====================================== -->
+
+    <main>
+
+        <div class="guide-card">
+
+            <div class="guide-header">
+
+                <span class="badge">
+                    Documentation
+                </span>
+
+                <h1>
+                    Cashier Operations & Repayments User Guide
+                </h1>
+
+            </div>
+
+<h2>1. Open Cashier</h2>
+
+            <div class="note">
+                <strong>Note:</strong> User needs to add a cashier before opening a cashier session. 
+                Go to <strong>Admin → Common → Cashier</strong> to configure it first.
+            </div>
+
+            <h3>1.1 Cash Register & Open Cashier</h3>
+            <div class="path">
+                Path: Cashier → Cash Register
+            </div>
+
+            <h3>1.2 Cashier Top-up</h3>
+            <div class="path">
+                Path: Admin → Common → Cashier Topup
+            </div>
+            <ul>
+                <li>Top-up cashier with cash (Cash in Hand).</li>
+            </ul>
+
+            <h3>1.2 Mapping GL Accounts</h3>
+            <div class="path">
+                Paths:<br>
+                1. Admin → Finance → Notes<br>
+                2. Admin → Finance → Finance GL Mapping<br>
+                3. Admin → Finance → Finance Report GL Mapping
+            </div>
+            <ul>
+                <li>Configure General Ledger (GL) account mappings before making payments.</li>
+            </ul>
+
+            <h3>1.3 Create Bank Accounts</h3>
+            <div class="path">
+                Paths:<br>
+                1. Add Banks - Admin → Finance → Bank<br>
+                2. Add bank branches - Admin → Finance → Bank Branches<br>
+                3. Add Bank accounts - Admin → Finance →Bank Accounts<br>
+                4. Add Cheque books - Admin → Finance → Cheque Book Register
+            </div>
+            <ul>
+                <li>To make payments using bank account or cheques this configuration Requires.</li>
+            </ul>
+
+            <hr>
+
+            <h2>2. Loan Repayment</h2>
+            <ul>
+                <li><strong>Micro Loan Repayment:</strong> <span class="path" style="display:inline-block; margin: 2px 0; padding: 3px 8px;">Path: Cashier → Micro Loan → Repayment</span></li>
+                <li><strong>Business Loan Repayment:</strong> <span class="path" style="display:inline-block; margin: 2px 0; padding: 3px 8px;">Path: Cashier → Business Loan → Repayment</span></li>
+                <li><strong>Lease Repayment:</strong> <span class="path" style="display:inline-block; margin: 2px 0; padding: 3px 8px;">Path: Cashier → Leasing → Repayment</span></li>
+            </ul>
+
+            <hr>
+
+            <h2>3. Payment Cancel</h2>
+            <p>Used to cancel an unwanted or incorrect transaction repayment.</p>
+            <ul>
+                <li><strong>Micro Loan Payment Cancel:</strong> <span class="path" style="display:inline-block; margin: 2px 0; padding: 3px 8px;">Path: Cashier → Micro Loan → Payment Cancel</span></li>
+                <li><strong>Business Loan Payment Cancel:</strong> <span class="path" style="display:inline-block; margin: 2px 0; padding: 3px 8px;">Path: Cashier → Business Loan → Payment Cancel</span></li>
+                <li><strong>Lease Payment Cancel:</strong> <span class="path" style="display:inline-block; margin: 2px 0; padding: 3px 8px;">Path: Cashier → Leasing → Payment Cancel</span></li>
+            </ul>
+            
+            <div class="danger-note">
+                <span class="danger-badge">⚠️</span>
+                <div>
+                    User needs to approve the payment cancellation from the respective <strong>[Micro Loan / Business Loan Module / Lease Module] → Approvals → Payment Cancel</strong>
+                    <br><br>
+                    Unless the approval process is officially completed and done, the payment transaction will <strong>NOT</strong> be cancelled in the system.
+                </div>
+            </div>
+
+            <div class="note">
+                <strong>Status Processing Rules:</strong>
+                <ul style="margin-top: 5px; padding-left: 20px;">
+                    <li>If the cancellation is <strong>rejected</strong> from approval, the payment will not be cancelled.</li>
+                    <li>If the cancellation is <strong>accepted</strong>, then the payment is cancelled.</li>
+                    <li>The relevant status (whether <em>Pending</em>, <em>Cancelled</em>, or <em>Rejected</em>) can be viewed from <strong>Cashier → [Micro Loan / Business Loan / Lease] → Payment Cancel</strong>.</li>
+                </ul>
+            </div>
+
+            <hr>
+
+            <h2>4. Facility Charges</h2>
+            <p>Facility charges are displayed dynamically only after the loan verification process is officially finalized. As the immediate next step following successful loan verification (After <strong>Micro Loan/Business Loan → Approvals → HOO</strong>), user is required to settle these processing dues.</p>
+            
+            <h3>4.1 Paying Facility Charges</h3>
+            <ul>
+                <li><strong>Micro Loan Facility Charges:</strong> <span class="path" style="display:inline-block; margin: 2px 0; padding: 3px 8px;">Path: Cashier → Micro Loan → Facility Charges</span></li>
+                <li><strong>Business Loan Facility Charges:</strong> <span class="path" style="display:inline-block; margin: 2px 0; padding: 3px 8px;">Path: Cashier → Business Loan → Facility Charges</span></li>
+                <li><strong>Leasing Facility Charges:</strong> <span class="path" style="display:inline-block; margin: 2px 0; padding: 3px 8px;">Path: Cashier → Leasing → Facility Charges</span></li>
+            </ul>
+
+            <h3>4.2 Facility Charges Cancellation</h3>
+            <p>If a paid facility charge needs to be reversed or cancelled, it must be initiated from the cashier dashboard and routed through authorization rules:</p>
+            <ul>
+                <li><strong>Micro Loan Charges Cancel:</strong> <span class="path" style="display:inline-block; margin: 2px 0; padding: 3px 8px;">Path: Cashier → Micro Loan → Charges Cancel</span></li>
+                <li><strong>Business Loan Charges Cancel:</strong> <span class="path" style="display:inline-block; margin: 2px 0; padding: 3px 8px;">Path: Cashier → Business Loan → Charges Cancel</span></li>
+                <li><strong>Lease Charges Cancel:</strong> <span class="path" style="display:inline-block; margin: 2px 0; padding: 3px 8px;">Path: Cashier → Leasing → Charges Cancel</span></li>
+            </ul>
+
+            <div class="danger-note">
+                <span class="danger-badge">⚠️</span>
+                <div>
+                    Once the reversal is applied by the cashier, user must approve it via: 
+                    <strong>[Micro Loan / Business Loan Module / Lease] → Approvals → Charge Cancel Approval</strong>.
+                    <br><br>
+                    Unless this systemic approval process is fully finalized, the charge will <strong>NOT</strong> be cancelled, and the transaction balance remains valid.
+                </div>
+            </div>
+
+            <div class="note">
+                <strong>Reporting Track:</strong> Users can query real-time processing statuses via: 
+                <strong>[Micro Loan / Business Loan / Lease Module] → Reports → Facility Charges</strong>.
+            </div>
+
+            <hr>
+
+            <h2>5. Default Write Off</h2>
+            <p>Used to initiate and process default write-offs for accounts deemed unrecoverable.</p>
+            <ul>
+                <li><strong>Micro Loan Default Write Off:</strong> <span class="path" style="display:inline-block; margin: 2px 0; padding: 3px 8px;">Path: Cashier → Micro Loan → Default Write Off</span></li>
+                <li><strong>Business Loan Default Write Off:</strong> <span class="path" style="display:inline-block; margin: 2px 0; padding: 3px 8px;">Path: Cashier → Business Loan → Default Write Off</span></li>
+                <li><strong>Lease Default Write Off:</strong> <span class="path" style="display:inline-block; margin: 2px 0; padding: 3px 8px;">Path: Cashier → Leasing → Default Write Off</span></li>
+            </ul>
+            <div class="note">
+                <strong>Note:</strong> Once created from the cashier panel, the request must be approved through the matching core module authorization track: 
+                <strong>[Micro Loan / Business Loan / Lease Module] → Approvals → Default Write Off</strong>.
+            </div>
+            
+            <div class="danger-note">
+                <span class="danger-badge">⚠️</span>
+                <div>
+                    Unless the request is officially approved via the approvals track, the specified amount will <strong>NOT</strong> be default write-offed from the system. The loan balance remains active until authorized.
+                </div>
+            </div>
+
+            <hr>
+
+            <h2>6. Insurance Premium (Lease)</h2>
+            <p>This option is available exclusively for lease facilities to process insurance payments.</p>
+            <ul>
+                <li><strong>Lease Insurance Premium:</strong> <span class="path" style="display:inline-block; margin: 2px 0; padding: 3px 8px;">Path: Cashier → Leasing → Insurance Premium</span></li>
+            </ul>
+
+            <hr>
+
+            <h2>7. Pawning Renewal (Pawning)</h2>
+            <p>This option is available exclusively for pawning facilities (Renewal / Part Payment) to handle asset renewals or partial payments.</p>
+            <ul>
+                <li><strong>Pawning Renewal / Part Payment:</strong> <span class="path" style="display:inline-block; margin: 2px 0; padding: 3px 8px;">Path: Cashier → Pawning → Renewal</span></li>
+            </ul>
+
+            <hr>
+
+            <h2>8. Payment Wave Off (Pawning)</h2>
+            <p>Used to initiate and process payment wave-offs specifically for pawning accounts.</p>
+            <ul>
+                <li><strong>Pawning Payment Wave Off:</strong> <span class="path" style="display:inline-block; margin: 2px 0; padding: 3px 8px;">Path: Cashier → Pawning → Payment Wave Off</span></li>
+            </ul>
+            <div class="note">
+                <strong>Note:</strong> Once created from the cashier panel, the wave off request must be approved through the core pawning module authorization track: 
+                <strong>Pawning Module → Approvals → Payment Wave Off</strong>.
+            </div>
+
+            <hr>
+
+            <h2>9. Collection Payments</h2>
+            <p>Payments collected through the collection app can be viewed on sync collection data or from the ledger card reports.</p>
+            <ul>
+                <li>
+                    <strong>Micro Loan Sync & Reporting:</strong>
+                    <div class="path" style="margin: 5px 0;">Path 1: Cashier → Micro Loan → Sync Collection Data</div>
+                    <div class="path" style="margin: 5px 0;">Path 2: Micro Loan → Reports → Ledger Card</div>
+                </li>
+                <li style="margin-top: 10px;">
+                    <strong>Business Loan Sync & Reporting:</strong>
+                    <div class="path" style="margin: 5px 0;">Path 1: Cashier → Business Loan → Sync Collection Data</div>
+                    <div class="path" style="margin: 5px 0;">Path 2: Business Loan → Reports → Ledger Card</div>
+                </li>
+            </ul>
+
+            <hr>
+
+            <h2>10. Cash & Cheques Bank</h2>
+            <p>Used to manage and register direct banking adjustments for cash operations and physical cheques.</p>
+            <ul>
+                <li><strong>Cash Bank:</strong> <span class="path" style="display:inline-block; margin: 2px 0; padding: 3px 8px;">Path: Cashier → Cash Bank</span></li>
+                <li><strong>Cheque Bank:</strong> <span class="path" style="display:inline-block; margin: 2px 0; padding: 3px 8px;">Path: Cashier → Cheques Bank</span></li>
+            </ul>
+
+            <hr>
+
+            <h2>11. Close Cashier (Denominations)</h2>
+            <div class="path">
+                Path: Cashier → Denomination
+            </div>
+            <p>The Denomination screen acts as the master financial summary pane where all active running totals—including cash in hand, total cheque values, bank transfers, collections, and miscellaneous adjustments—are captured dynamically.</p>
+            
+            <div class="note">
+                <strong>Mandatory Day End Rule:</strong> At the close of business each day, the user <strong>must</strong> input the physical breakdown of currency counts into the Denomination panel. This action reconciles system-tracked amounts against actual assets and is required to officially close out the daily cashier session.
+            </div>
+
+            <hr>
+
+            <h2>Process Flow Summary</h2>
+
+            <div class="flow">
+                <ol>
+                    <li>Setup / Open Cashier (Add Cashier → Input Denominations → Open via Cash Register)</li>
+                    <li>Process Micro / Business / Lease / Pawning Repayments</li>
+                    <li>Manage Payment Cancellations <strong style="color: #de350b;">(Requires Module Approvals; Payment remains active until authorized)</strong></li>
+                    <li>Process Default Write Offs <strong style="color: #de350b;">(Requires Module Approvals; Amount remains unchanged until authorized)</strong></li>
+                    <li>Sync Collection App Data or View via Module Reports (Ledger Card)</li>
+                    <li>Close Cashier (Denominations)</li>
+                </ol>
+            </div>
+
+        </div>
+
+
+        </div>
+
+    </main>
+
+
+    <!-- SHARED FOOTER -->
+
+    <div id="footer-container"></div>
+
+
+    <!-- COMPONENT SCRIPT -->
+
+    <script src="js/components.js"></script>
+
+</body>
+
+</html>
