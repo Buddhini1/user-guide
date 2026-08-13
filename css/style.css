@@ -327,6 +327,7 @@ main {
 }
 
 
+
 /* =========================================
    HERO TEXT
 ========================================= */
@@ -888,6 +889,60 @@ footer {
     }
 
 }
+
+/* =========================================
+   FEATURES SECTION (3 CARDS)
+========================================= */
+
+.features-section {
+    width: 100%;
+    padding: 40px 0;
+    background: #ffffff;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    text-align: center;
+    padding: 15px;
+}
+
+.feature-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 18px;
+    height: 48px;
+}
+
+.feature-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--dark, #2b2d42);
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    font-size: 14px;
+    color: var(--text-muted, #6c757d);
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 820px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
 
 /* =========================================
    GUIDE IMAGE STYLING
